@@ -1,7 +1,9 @@
 (abyss-theme)
-(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/"))
 (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 ;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
 ;; and `package-pinned-packages`. Most users will not need or want to do this.
 ;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
@@ -30,10 +32,9 @@
  )
 (with-eval-after-load 'package (add-to-list 'package-archives '("nongnu" . "https://elpa.nongnu.org/nongnu/")))
 
-(require 'package)
+;;(require 'package)
 ;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
 ;; and `package-pinned-packages`. Most users will not need or want to do this.
-(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 ;;(package-initialize)
 (require 'org-journal)
 (require 'ox-reveal)
@@ -84,8 +85,6 @@
   :commands lsp-ui-mode)
 (require 'package)
 
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/"))
 
 (add-to-list 'package-selected-packages 'dash)
 (add-to-list 'package-selected-packages 'lsp-mode)
@@ -93,3 +92,4 @@
 
 (package-refresh-contents)
 ;;(package-install-selected-packages 'no-confirm)
+(global-set-key (kbd "<f12>") 'org-journal-new-entry)
