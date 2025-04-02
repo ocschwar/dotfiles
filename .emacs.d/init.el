@@ -101,17 +101,21 @@
 ;; -------------------------------------
 ;; Org mode
 ;; -------------------------------------
-;;(use-package org-mode
+(use-package org-mode
 ;;  :init
   ;; This allows PlantUML, Graphviz and ditaa diagrams
+  :init
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((ditaa . t)
    (dot . t)
-   (plantuml . t)))
-
+   (plantuml . t))
+ )
+:hook
+(org-babel-after-execute . org-redisplay-inline-images)
+)
 		
-  ;(org-babel-after-execute . org-redisplay-inline-images)
+  ;
 
  ;; ditaa installed through dpkg on Debian
 (setq org-ditaa-jar-path "/opt/homebrew/Cellar/ditaa/0.11.0_1/libexec/ditaa-0.11.0-standalone.jar")
@@ -124,3 +128,5 @@
  (setq plantuml-java-args (list "-Djava.awt.headless=true" "-jar"))
  (add-to-list 'auto-mode-alist '("\\.plantuml\\'" . plantuml-mode))
 
+(setq org-confirm-babel-evaluate nil)
+ 
