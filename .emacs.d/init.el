@@ -59,6 +59,7 @@
 (setq jedi:complete-on-dot t)                 ; optional
 (setq jedi:environment-virtualenv "/opt/homebrew/bin/virtualenv")
 (setq jedi:server-command (list "python3" jedi:server-script))
+(setq org-plantuml-jar-path "/opt/homebrew/Cellar/plantuml/1.2025.2/libexec/plantuml.jar")
 
 ;(defun fluence-input ()
 ; "Add INPUT to a Fluence Pytest file"
@@ -89,7 +90,37 @@
 (add-to-list 'package-selected-packages 'dash)
 (add-to-list 'package-selected-packages 'lsp-mode)
 (add-to-list 'package-selected-packages 'magit-section)
+					; 
+					; 
 
-(package-refresh-contents)
+;;(package-refresh-contents)
 ;;(package-install-selected-packages 'no-confirm)
 (global-set-key (kbd "<f12>") 'org-journal-new-entry)
+(add-hook 'rust-mode-hook 'lsp-deferred)
+
+;; -------------------------------------
+;; Org mode
+;; -------------------------------------
+;;(use-package org-mode
+;;  :init
+  ;; This allows PlantUML, Graphviz and ditaa diagrams
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((ditaa . t)
+   (dot . t)
+   (plantuml . t)))
+
+		
+  ;(org-babel-after-execute . org-redisplay-inline-images)
+
+ ;; ditaa installed through dpkg on Debian
+(setq org-ditaa-jar-path "/opt/homebrew/Cellar/ditaa/0.11.0_1/libexec/ditaa-0.11.0-standalone.jar")
+ ;; Do not ask before evaluating a code block
+ ;(org-confirm-babel-evaluate nil)
+ ;; Fix for including SVGs
+ (setq plantuml-default-exec-mode 'executable)
+ (setq plantuml-jar-args '("-tpng"))
+ (setq plantuml-output-type "png")
+ (setq plantuml-java-args (list "-Djava.awt.headless=true" "-jar"))
+ (add-to-list 'auto-mode-alist '("\\.plantuml\\'" . plantuml-mode))
+
