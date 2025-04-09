@@ -19,10 +19,11 @@
  '(inhibit-startup-screen t)
  '(org-journal-dir "~/Diaries/personal")
  '(package-selected-packages
-   '(## abyss-theme company-lean dash haskell-mode helm-lean jedi
-	jenkinsfile-mode lean-mode lsp-jedi lsp-mode lsp-ui magit
-	magit-section mermaid-mode ob-mermaid ob-rust org org-journal
-	ox-epub ox-pandoc ox-reveal ox-typst rust-mode use-package
+   '(## abyss-theme company-lean copilot copilot-chat dash feature-mode
+	gherkin-mode haskell-mode helm-lean jedi jenkinsfile-mode
+	lean-mode lsp-jedi lsp-mode lsp-ui magit magit-section
+	mermaid-mode ob-mermaid ob-rust org org-journal ox-epub
+	ox-pandoc ox-reveal ox-typst rust-mode use-package
 	yasnippet-lean)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -132,3 +133,4 @@
 
 (setq org-confirm-babel-evaluate nil)
  
+(define-key copilot-completion-map (kbd "<tab>") 'copilot-accept-completion)
