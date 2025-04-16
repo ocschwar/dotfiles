@@ -130,7 +130,7 @@
  (setq plantuml-output-type "png")
  (setq plantuml-java-args (list "-Djava.awt.headless=true" "-jar"))
  (add-to-list 'auto-mode-alist '("\\.plantuml\\'" . plantuml-mode))
-
+(require 'copilot)
 (setq org-confirm-babel-evaluate nil)
  
 (define-key copilot-completion-map (kbd "<tab>") 'copilot-accept-completion)
