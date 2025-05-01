@@ -11,6 +11,7 @@
 (require 'org-re-reveal)
 (setq python-shell-interpreter "python3")
 (custom-set-variables
+  ;; unavailable? helm-lean company-lean lean-mode  yasnippet-lean
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
@@ -19,12 +20,12 @@
  '(inhibit-startup-screen t)
  '(org-journal-dir "~/Diaries/personal")
  '(package-selected-packages
-   '(## abyss-theme company-lean copilot copilot-chat dash feature-mode
-	gherkin-mode haskell-mode helm-lean jedi jenkinsfile-mode
-	lean-mode lsp-jedi lsp-mode lsp-ui magit magit-section
-	mermaid-mode ob-mermaid ob-rust org org-journal ox-epub
-	ox-pandoc ox-reveal ox-typst rust-mode use-package
-	yasnippet-lean)))
+   '(## abyss-theme copilot copilot-chat dash feature-mode
+	gherkin-mode haskell-mode jedi jenkinsfile-mode
+	lsp-jedi lsp-mode lsp-ui magit magit-section
+	mermaid-mode ob-mermaid ob-rust org org-journal org-roam
+	ox-epub ox-pandoc ox-reveal ox-typst rust-mode use-package
+	yasnippet)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -134,3 +135,4 @@
 (setq org-confirm-babel-evaluate nil)
  
 (define-key copilot-completion-map (kbd "<tab>") 'copilot-accept-completion)
+(define-key copilot-completion-map (kbd "<backtab>") 'copilot-accept-completion-by-word)
