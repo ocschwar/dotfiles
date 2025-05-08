@@ -136,3 +136,7 @@
  
 (define-key copilot-completion-map (kbd "<tab>") 'copilot-accept-completion)
 (define-key copilot-completion-map (kbd "<backtab>") 'copilot-accept-completion-by-word)
+(setq lean4-mode-required-packages '(dash f flycheck lsp-mode magit-section s))
+(add-to-list 'load-path "/Users/omri.schwarz/Projects/lean4-mode")
+(require 'lean4-mode)
+
