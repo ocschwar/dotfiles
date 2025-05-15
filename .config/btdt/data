@@ -1,0 +1,2 @@
+echo foo	test	
+ssh -ti ~/.ssh/id_ed25519 ubuntu@server08 "GPAT=${GPAT} /bin/bash"	server08	connect with GPAT
