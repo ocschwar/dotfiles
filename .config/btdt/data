@@ -1,3 +1,5 @@
 echo foo	test	
 ssh -ti ~/.ssh/id_ed25519 ubuntu@server08 "GPAT=${GPAT} /bin/bash"	server08	connect with GPAT
 ssh -ti ~/.ssh/id_ed25519 ubuntu@server10 "GPAT=${GPAT} /bin/bash"	server10	
+dotfiles  ls-tree -r main --name-only	dotfiles	list all revision-tracked dotfiles.
+cat .profile	test	
