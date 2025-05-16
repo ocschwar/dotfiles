@@ -9,6 +9,7 @@
 ;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
 (require 'org-re-reveal)
+(require 'ox-beamer)
 (setq python-shell-interpreter "python3")
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
