@@ -6,3 +6,4 @@ cat .profile	test
 ssh -ti ~/.ssh/id_ed25519 ubuntu@server09 "GPAT=${GPAT} /bin/bash"	server09	with GPAT
 ssh -ti ~/.ssh/id_ed25519 ubuntu@enst01ap97qa  "GPAT=${GPAT} /bin/bash"	97qa	
 ssh -F ~/.ssh/config OS_TSO	TSO	TSO jumphost
+ssh -p 6122 fluence@localhost	TSO_1	

@@ -23,9 +23,9 @@
    '(## abyss-theme company-coq copilot copilot-chat dash feature-mode
 	gherkin-mode haskell-mode jedi jenkinsfile-mode lsp-jedi
 	lsp-mode lsp-ui magit magit-section mermaid-mode ob-mermaid
-	ob-rust org org-journal org-roam ox-beamer-lecture ox-epub
-	ox-pandoc ox-reveal ox-typst proof-general rust-mode
-	use-package yasnippet)))
+	ob-rust ocaml-eglot ocaml-ts-mode org org-journal org-roam
+	ox-beamer-lecture ox-epub ox-pandoc ox-reveal ox-typst
+	proof-general rust-mode use-package yasnippet)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
