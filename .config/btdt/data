@@ -1,4 +1,3 @@
-echo foo	test	
 ssh -ti ~/.ssh/id_ed25519 ubuntu@server08 "GPAT=${GPAT} /bin/bash"	server08	connect with GPAT
 ssh -ti ~/.ssh/id_ed25519 ubuntu@server10 "GPAT=${GPAT} /bin/bash"	server10	
 dotfiles  ls-tree -r main --name-only	dotfiles	list all revision-tracked dotfiles.
@@ -6,4 +5,7 @@ cat .profile	test
 ssh -ti ~/.ssh/id_ed25519 ubuntu@server09 "GPAT=${GPAT} /bin/bash"	server09	with GPAT
 ssh -ti ~/.ssh/id_ed25519 ubuntu@enst01ap97qa  "GPAT=${GPAT} /bin/bash"	97qa	
 ssh -F ~/.ssh/config OS_TSO	TSO	TSO jumphost
-ssh -p 6122 fluence@localhost	TSO_1	
+ssh -p 6122 fluence@localhost	ffTSO_1	
+ssh -ti ~/.ssh/id_ed25519 ubuntu@10.190.250.185 "GPAT=${GPAT} /bin/bash"	enst008	
+ssh -ti ~/.ssh/id_ed25519 ubuntu@server09 "GPAT=${GPAT} /bin/bash"	server09	
+ssh fluence@10.198.173.3	BLR	BLR

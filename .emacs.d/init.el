@@ -20,12 +20,13 @@
  '(inhibit-startup-screen t)
  '(org-journal-dir "~/Diaries/personal")
  '(package-selected-packages
-   '(## abyss-theme company-coq copilot copilot-chat dash feature-mode
-	gherkin-mode haskell-mode jedi jenkinsfile-mode lsp-jedi
-	lsp-mode lsp-ui magit magit-section mermaid-mode ob-mermaid
-	ob-rust ocaml-eglot ocaml-ts-mode org org-journal org-roam
-	ox-beamer-lecture ox-epub ox-pandoc ox-reveal ox-typst
-	proof-general rust-mode use-package yasnippet)))
+   '(## abyss-theme company-coq copilot copilot-chat dash emacsql
+	feature-mode gherkin-mode haskell-mode jedi jenkinsfile-mode
+	lsp-jedi lsp-mode lsp-ui magit magit-section mermaid-mode
+	ob-mermaid ob-rust ocaml-eglot ocaml-ts-mode org org-journal
+	org-roam ox-beamer-lecture ox-epub ox-pandoc ox-reveal
+	ox-typst proof-general rust-mode use-package writefreely
+	yasnippet)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -61,7 +62,7 @@
 (setq jedi:complete-on-dot t)                 ; optional
 (setq jedi:environment-virtualenv "/opt/homebrew/bin/virtualenv")
 (setq jedi:server-command (list "python3" jedi:server-script))
-(setq org-plantuml-jar-path "/opt/homebrew/Cellar/plantuml/1.2025.2/libexec/plantuml.jar")
+(setq org-plantuml-jar-path "/opt/homebrew/Cellar/plantuml/1.2025.4/libexec/plantuml.jar")
 
 ;(defun fluence-input ()
 ; "Add INPUT to a Fluence Pytest file"

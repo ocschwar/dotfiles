@@ -153,3 +153,5 @@ recore () {
 # This section can be safely removed at any time if needed.
 [[ ! -r '/Users/omri.schwarz/.opam/opam-init/init.zsh' ]] || source '/Users/omri.schwarz/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
 # END opam configuration
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+export PATH="$PATH"
