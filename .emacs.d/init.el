@@ -10,6 +10,7 @@
 (package-initialize)
 (require 'org-re-reveal)
 (require 'ox-beamer)
+(require 'ox-md)
 (setq python-shell-interpreter "python3")
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -25,8 +26,7 @@
 	lsp-jedi lsp-mode lsp-ui magit magit-section mermaid-mode
 	ob-mermaid ob-rust ocaml-eglot ocaml-ts-mode org org-journal
 	org-roam ox-beamer-lecture ox-epub ox-pandoc ox-reveal
-	ox-typst proof-general rust-mode use-package writefreely
-	yasnippet)))
+	ox-typst proof-general rust-mode use-package yasnippet)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
