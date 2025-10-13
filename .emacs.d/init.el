@@ -41,6 +41,7 @@
 ;;(package-initialize)
 (require 'org-journal)
 (require 'ox-reveal)
+(require 'ox-pandoc)
 ;;(setq load-path (cons "/Users/omri/Lean/lean4-mode" load-path))
 
 ;;(setq lean4-mode-required-packages '(dash f flycheck lsp-mode magit-section s))
@@ -84,7 +85,8 @@
 
 (use-package lsp-mode
   :hook
-  ((python-mode . lsp)))
+  ((python-mode . lsp))
+  ((rust-mode . lsp)))
 (use-package lsp-ui
   :commands lsp-ui-mode)
 (require 'package)
