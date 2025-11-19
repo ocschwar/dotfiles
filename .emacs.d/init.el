@@ -11,6 +11,7 @@
 (require 'org-re-reveal)
 (require 'ox-beamer)
 (require 'ox-md)
+(require 'ox)
 (setq python-shell-interpreter "python3")
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -18,15 +19,19 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
+ '(ignored-local-variable-values
+   '((writefreely-post-token . "2RUs6W6ahOiPXbsk5veTKCqsRXY953Ir")
+     (writefreely-post-id . "s2csxkiqkbuld")))
  '(inhibit-startup-screen t)
  '(org-journal-dir "~/Diaries/personal")
  '(package-selected-packages
    '(## abyss-theme company-coq copilot copilot-chat dash emacsql
 	feature-mode gherkin-mode haskell-mode jedi jenkinsfile-mode
 	lsp-jedi lsp-mode lsp-ui magit magit-section mermaid-mode
-	ob-mermaid ob-rust ocaml-eglot ocaml-ts-mode org org-journal
-	org-roam ox-beamer-lecture ox-epub ox-pandoc ox-reveal
-	ox-typst proof-general rust-mode use-package yasnippet)))
+	ob-mermaid ob-rust ocaml-eglot ocaml-ts-mode org
+	org-babel-eval-in-repl org-elp org-journal org-roam
+	ox-beamer-lecture ox-epub ox-pandoc ox-reveal ox-typst
+	proof-general rust-mode use-package yasnippet)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -42,7 +47,7 @@
 (require 'org-journal)
 (require 'ox-reveal)
 (require 'ox-pandoc)
-;;(setq load-path (cons "/Users/omri/Lean/lean4-mode" load-path))
+(setq load-path (cons "/Users/omri.schwarz/Projects/lean4-mode" load-path))
 
 ;;(setq lean4-mode-required-packages '(dash f flycheck lsp-mode magit-section s))
 
@@ -92,11 +97,6 @@
 (require 'package)
 
 
-(add-to-list 'package-selected-packages 'dash)
-(add-to-list 'package-selected-packages 'lsp-mode)
-(add-to-list 'package-selected-packages 'magit-section)
-					; 
-					; 
 
 ;;(package-refresh-contents)
 ;;(package-install-selected-packages 'no-confirm)
@@ -139,7 +139,7 @@
  
 (define-key copilot-completion-map (kbd "<tab>") 'copilot-accept-completion)
 (define-key copilot-completion-map (kbd "<backtab>") 'copilot-accept-completion-by-word)
-(setq lean4-mode-required-packages '(dash f flycheck lsp-mode magit-section s))
-(add-to-list 'load-path "/Users/omri.schwarz/Projects/lean4-mode")
-(require 'lean4-mode)
+;;(setq lean4-mode-required-packages '(dash f flycheck lsp-mode magit-section s))
+;;(add-to-list 'load-path "/Users/omri.schwarz/Projects/lean4-mode")
+;;(require 'lean4-mode)
 

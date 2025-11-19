@@ -9,3 +9,4 @@ ssh -p 6122 fluence@localhost	ffTSO_1
 ssh -ti ~/.ssh/id_ed25519 ubuntu@10.190.250.185 "GPAT=${GPAT} /bin/bash"	enst008	
 ssh -ti ~/.ssh/id_ed25519 ubuntu@server09 "GPAT=${GPAT} /bin/bash"	server09	
 ssh fluence@10.198.173.3	BLR	BLR
+ source Fluence/.fluence/bin/activate	VENV	open the venv for TP OPC UA
