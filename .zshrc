@@ -102,7 +102,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias dotfiles=/usr/bin/git --git-dir=${HOME}/.dotfiles/ --work-tree=${HOME}
+
+alias dotfiles='/usr/bin/git --git-dir=${HOME}/.dotfiles/ --work-tree=${HOME}'
 . "$HOME/.cargo/env"
 
 bt() {
@@ -138,6 +139,10 @@ dt() {
     local cmd=$(cat $data | fzf -d'\t' --with-nth 2 --preview='echo -e "\033[1m"{1}"\033[0m""\n\n"{3}' | cut -f1)
     echo "${cmd}"
     eval "${cmd}"
+}
+
+gtts() {
+    cat "${BTDT_DATA:-${HOME}/.config/btdt/data}"
 }
 
 recore () {
