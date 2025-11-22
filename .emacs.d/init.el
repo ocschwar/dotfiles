@@ -70,6 +70,18 @@
 (setq jedi:server-command (list "python3" jedi:server-script))
 (setq org-plantuml-jar-path "/opt/homebrew/Cellar/plantuml/1.2025.4/libexec/plantuml.jar")
 
+(defun personal-journal ()
+  "Set the Org Journal to personal"
+  (interactive)
+  (setq org-journal-dir "~/Diaries/personal")
+  )
+(defun work-journal ()
+  "Set the Org Journal to personal"
+  (interactive)
+  (setq org-journal-dir "~/Fluence/Diaries/")
+  )
+
+
 ;(defun fluence-input ()
 ; "Add INPUT to a Fluence Pytest file"
 ; (interactive)
