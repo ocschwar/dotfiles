@@ -12,7 +12,7 @@
 (require 'ox-beamer)
 (require 'ox-md)
 (require 'ox)
-(setq python-shell-interpreter "python3")
+(setq python-shell-interpreter "/opt/homebrew/bin/python3")
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -26,9 +26,9 @@
  '(org-journal-dir "~/Diaries/personal")
  '(package-selected-packages
    '(## abyss-theme company-coq copilot copilot-chat dash emacsql
-	feature-mode gherkin-mode haskell-mode jedi jenkinsfile-mode
-	lsp-jedi lsp-mode lsp-ui magit magit-section mermaid-mode
-	ob-mermaid ob-rust ocaml-eglot ocaml-ts-mode org
+	feature-mode flycheck gherkin-mode haskell-mode jedi
+	jenkinsfile-mode lsp-jedi lsp-mode lsp-ui magit magit-section
+	mermaid-mode ob-mermaid ob-rust ocaml-eglot ocaml-ts-mode org
 	org-babel-eval-in-repl org-elp org-journal org-roam
 	ox-beamer-lecture ox-epub ox-pandoc ox-reveal ox-typst
 	proof-general rust-mode use-package yasnippet)))
@@ -49,25 +49,25 @@
 (require 'ox-pandoc)
 (setq load-path (cons "/Users/omri.schwarz/Projects/lean4-mode" load-path))
 
-;;(setq lean4-mode-required-packages '(dash f flycheck lsp-mode magit-section s))
+;; (setq lean4-mode-required-packages '(dash f flycheck lsp-mode magit-section s))
 
-;;(require 'package)
-;(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
-;(let ((need-to-refresh t))
-;  (dolist (p lean4-mode-required-packages)
-;    (when (not (package-installed-p p))
-;      (when need-to-refresh
-;        (package-refresh-contents)
-;        (setq need-to-refresh nil))
-;      (package-install p))))
+;; (require 'package)
+;; (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+;; (let ((need-to-refresh t))
+;;   (dolist (p lean4-mode-required-packages)
+;;     (when (not (package-installed-p p))
+;;       (when need-to-refresh
+;;         (package-refresh-contents)
+;;         (setq need-to-refresh nil))
+;;       (package-install p))))
 
-;(require 'lean4-mode)
-(require 'jedi)
-(add-hook 'python-mode-hook 'jedi:setup)
-(setq jedi:setup-keys t)                      ; optional
-(setq jedi:complete-on-dot t)                 ; optional
-(setq jedi:environment-virtualenv "/opt/homebrew/bin/virtualenv")
-(setq jedi:server-command (list "python3" jedi:server-script))
+(require 'lean4-mode)
+;;(require 'jedi)
+;;(add-hook 'python-mode-hook 'jedi:setup)
+;;(setq jedi:setup-keys t)                      ; optional
+;;(setq jedi:complete-on-dot t)                 ; optional
+;;(setq jedi:environment-virtualenv "/opt/homebrew/bin/virtualenv")
+;;(setq jedi:server-command (list "python3" jedi:server-script))
 (setq org-plantuml-jar-path "/opt/homebrew/Cellar/plantuml/1.2025.4/libexec/plantuml.jar")
 
 (defun personal-journal ()
@@ -81,7 +81,12 @@
   (setq org-journal-dir "~/Fluence/Diaries/")
   )
 
-
+(defun move-to-zola ()
+  "Move the diary entry to a Zola .md file in the blog"
+  (interactive)
+  (personal-journal)
+;  (insert "TEST")
+  )
 ;(defun fluence-input ()
 ; "Add INPUT to a Fluence Pytest file"
 ; (interactive)
@@ -151,7 +156,3 @@
  
 (define-key copilot-completion-map (kbd "<tab>") 'copilot-accept-completion)
 (define-key copilot-completion-map (kbd "<backtab>") 'copilot-accept-completion-by-word)
-;;(setq lean4-mode-required-packages '(dash f flycheck lsp-mode magit-section s))
-;;(add-to-list 'load-path "/Users/omri.schwarz/Projects/lean4-mode")
-;;(require 'lean4-mode)
-

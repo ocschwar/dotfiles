@@ -12,3 +12,5 @@ ssh fluence@10.198.173.3	BLR	BLR
  source Fluence/.fluence/bin/activate	VENV	open the venv for TP OPC UA
  ssh -ti ~/.ssh/id_ed25519 ubuntu@server07 "GPAT=${GPAT} /bin/bash"		server07	
  ssh -ti ~/.ssh/id_ed25519 ubuntu@server07 "GPAT=${GPAT} /bin/bash"	server07	
+ssh -ti ~/.ssh/id_ed25519 ubuntu@10.190.250.184 "GPAT=${GPAT} /bin/bash"
+	enst008	enst008-array
