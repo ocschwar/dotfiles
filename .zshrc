@@ -160,5 +160,5 @@ recore () {
 # END opam configuration
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export PATH="$PATH"
-source .zsh_aliases
+source ~/.zsh_aliases
 

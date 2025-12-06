@@ -30,7 +30,7 @@
 	jenkinsfile-mode lsp-jedi lsp-mode lsp-ui magit magit-section
 	mermaid-mode ob-mermaid ob-rust ocaml-eglot ocaml-ts-mode org
 	org-babel-eval-in-repl org-elp org-journal org-roam
-	ox-beamer-lecture ox-epub ox-pandoc ox-reveal ox-typst
+	ox-beamer-lecture ox-epub ox-gfm ox-pandoc ox-reveal ox-typst
 	proof-general rust-mode use-package yasnippet)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -48,7 +48,10 @@
 (require 'ox-reveal)
 (require 'ox-pandoc)
 (setq load-path (cons "/Users/omri.schwarz/Projects/lean4-mode" load-path))
+(add-to-list 'load-path "/Users/omri.schwarz/Projects/verus-mode.el")
+(setq verus-home "/Users/omri.schwarz/Projects/")
 
+(require 'verus-mode)
 ;; (setq lean4-mode-required-packages '(dash f flycheck lsp-mode magit-section s))
 
 ;; (require 'package)
